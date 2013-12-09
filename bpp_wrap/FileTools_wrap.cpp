@@ -1,9 +1,10 @@
 #include <Bpp/Io/FileTools.h>
 #include <boost/python.hpp>
+#include <boost/noncopyable.hpp>
 using namespace boost::python;
 
-BOOST_PYTHON_MODULE(bpp) {
-    class_<bpp::FileTools>("FileTools", init< >())
+void export_FileTools() {
+    class_<bpp::FileTools, boost::noncopyable>("FileTools", init< >())
     .def("fileExists", &bpp::FileTools::fileExists)
     .def("directoryExists", &bpp::FileTools::directoryExists)
     .def("getFileName", &bpp::FileTools::getFileName)

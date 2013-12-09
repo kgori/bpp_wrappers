@@ -1,1 +1,0 @@
-PYTHON_ADD_MODULE(bpp FileTools_wrap.cpp)

@@ -10,7 +10,7 @@ FIND_PACKAGE(PythonInterp)
 FIND_PACKAGE(PythonLibs 2 REQUIRED)
 
 # Get Boost libraries and header locations.
-set(BOOST_ROOT          "/usr/local/Cellar/boost/1.55.0")
+set(BOOST_ROOT          "/usr/local/Cellar/boost/1.54.0")
 set(BOOST_INCLUDEDIR    "/usr/local/include")
 set(BOOST_LIBRARYDIR    "/usr/local/lib")
 # here we only define python but we could add in more if needed.
@@ -27,4 +27,4 @@ LINK_LIBRARIES(${Boost_LIBRARIES} ${PYTHON_LIBRARIES} ${Bpp_LIBRARIES}) # Deprec
 
 # Point to the source code.
 
-ADD_SUBDIRECTORY(FileTools)
+ADD_SUBDIRECTORY(bpp_wrap)
